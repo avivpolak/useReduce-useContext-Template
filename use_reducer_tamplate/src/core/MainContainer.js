@@ -4,16 +4,17 @@ import SearchBar from "./SearchBar";
 import MainState from "../contexts/mainState";
 import ListFriends from "./ListFriends";
 import AddFriend from "./AddFriend";
+import Togglable from "./Togglable";
+
 export default function MainContainer() {
     return (
         <div>
             <MainState>
                 <NavBar />
-                <Togglable>
+                <SearchBar />
+                <Togglable buttonLabel={"Add a friend"}>
                     <AddFriend />
                 </Togglable>
-
-                <SearchBar />
                 <ListFriends />
             </MainState>
         </div>

@@ -25,6 +25,28 @@ export const friendReducer = (state, action) => {
                 return item;
             });
             return [...updatedState];
+        case "SORT_BY_AGE":
+            let ageSortedState = state.sort(function (a, b) {
+                return a.age - b.age;
+            });
+
+            return [...ageSortedState];
+        case "SORT_BY_NAME":
+            let nameSortedState = state.sort(function (a, b) {
+                var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+                var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+                if (nameA < nameB) {
+                    return -1;
+                }
+                if (nameA > nameB) {
+                    return 1;
+                }
+
+                // names must be equal
+                return 0;
+            });
+
+            return [...nameSortedState];
         default:
             return state;
     }

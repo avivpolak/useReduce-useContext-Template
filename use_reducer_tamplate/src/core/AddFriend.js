@@ -52,7 +52,7 @@ export default function AddFriend() {
                         placeholder="Enter friend name"
                     />
                 </Form.Group>
-                <Button onClick={handleSubmit}></Button>
+                <Button onClick={handleSubmit}>Add</Button>
             </Form>
         </Container>
     );
