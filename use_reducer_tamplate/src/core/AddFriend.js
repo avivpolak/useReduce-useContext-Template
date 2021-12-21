@@ -49,7 +49,7 @@ export default function AddFriend() {
                         value={age}
                         type="text"
                         name="age"
-                        placeholder="Enter friend name"
+                        placeholder="Enter friend age"
                     />
                 </Form.Group>
                 <Button onClick={handleSubmit}>Add</Button>
