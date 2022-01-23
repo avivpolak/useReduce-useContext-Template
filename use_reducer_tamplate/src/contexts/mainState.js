@@ -1,15 +1,15 @@
 import React, { useReducer } from "react";
 import mainContext from "./main-context";
-import { friendReducer } from "../reducers/friendReducer";
+import { wordReducer } from "../reducers/wordReducer";
 import { db } from "../db/drillDB";
 const MainState = (props) => {
-    const [friendsState, friendsDispatch] = useReducer(friendReducer, [...db]);
+    const [wordsState, wordsDispatch] = useReducer(wordReducer, [...db]);
 
     return (
         <mainContext.Provider
             value={{
-                friendsState,
-                friendsDispatch,
+                wordsState,
+                wordsDispatch,
             }}
         >
             {props.children}
